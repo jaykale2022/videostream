@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* width: 500px;*/
+.c2{
+    overflow: auto;
+    max-height: 100%;
+  }
+    #content{
+      display: grid;
+      width: 100%;
+      text-align: center;
+      height:100vh;
+      
+      grid-template-columns:repeat(4,1fr);
+      grid-template-rows:repeat(5,1fr);
+      grid-gap: 10px;
+      justify-self: center;
+    }
+    #search{
+      border-radius: 20px;
+      height:40%;
+      width:60%;
+    }
+    video{
+      border:1px solid black;
+    }
+    .left{
+      grid-column: 1/6;
+    }
+    .right{
+      grid-column:6/7;
+    }
+    .c1{
+      background-color: orange;
+      grid-column: 1/5;
+      grid-row:1/2;
+      border:2px solid black;
+      display: grid;
+      grid-template-columns:repeat(6,1fr);
+      grid-template-rows:repeat(1,1fr);
+      height:minmax(300px,auto);
+      grid-gap: 10px;
+    }
+    .c5{
+      grid-column: 1/2;
+      grid-row:2/6;
+      border:2px solid black;
+    }
+    .c2{
+      grid-column: 2/5;
+      grid-row:3/6;
+      border:2px solid black;
+      display: grid;
+      grid-template-columns:repeat(3,1fr);
+      grid-template-rows:repeat(2,1fr);
+      height:100%;
+    }
+    
+    .c6{
+      grid-column: 2/5;
+      grid-row:2/3;
+      border:2px solid black;
+     
+
+    }
+    .s{
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div class="c1">
+      <div class="left">
+      <h1 >StudyWise</h1>
+       <!-- contains the links to various social media platforms-->
+        <a href=""><br><br><img src="{{url_for('static',path='meta.svg')}}" alt=""> meta</a>
+        <a href=""><img src="{{url_for('static',path='youtube.svg')}}" alt="">instagram</a>
+       <a href=""><img src="{{url_for('static',path='instagram.svg')}}" alt="">youtube</a>
+       <a href="http://127.0.0.1:8000/live"><img src="{{url_for('static',path='live_logo.png')}}" alt="">go live</a>
+       </div>
+       <div class="right">
+      <img alt="broken"style="grid-column:6/7;border-radius:100%;height: 100px;
+      " src="{{url_for('static',path='passphoto.jpg')}}">
+      <h2 id="username"style="display:inline-block;grid-column:6/7;">jay kale</h2>
+      <button style="grid-column: 6/7;
+      height: 30px;">Logout</button>
+    </div>
+    </div>
+    <div class="c5">
+      history
+      <ul id="hlist"></ul>
+    </div>
+    
+    <div class="c2" >
+      <div class="v1"> 
+        <video  controls autoplay muted loop style="grid-column: 1/2;grid-row:1/2;
+        justify-content:left;"width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid1.mp4">
+        </video>
+        <h3 id="t1">toddler manu speaking</h3>
+      </div>
+      <div class="v2">
+        <video  controls autoplay muted loop style="grid-column: 1/2;
+        grid-row:2/3;" width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid2.mp4">
+        </video>
+        <h3 id="t2">manu praying to god</h3>
+      </div>
+      <div class="v3">
+        <video  controls autoplay muted loop style="grid-column: 2/3;grid-row:1/2;
+        justify-content:left;"width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid3.mp4">
+        </video>
+        <h3 id="t3">aradhya dancing</h3>
+      </div>
+      <div class="v4">
+        <video  controls autoplay muted loop style="grid-column: 2/3;grid-row:2/3;"width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid4.mp4">
+        </video>
+        <h3 id="t4">manu in restaurant</h3>
+      </div>
+      <div class="v5">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:1/2;
+        justify-content:left;"width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid5.mp4">
+        </video>
+        <h3 id="t5">manu sitting in car</h3>
+      </div>
+      <div class="v6">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid6.mp4">
+        </video>
+        <h3 id="t6">vainavi dancing</h3>
+      </div>
+      <div class="v7">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid7.mp4">
+        </video>
+        <h3 id="t7">vainavi dancing</h3>
+      </div>
+      <div class="v8">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="https://127.0.0.1:8000/vid8.mp4">
+        </video>
+        <h3 id="t8">vainavi dancing</h3>
+      </div>
+      <div class="v9">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid9.mp4">
+        </video>
+        <h3 id="t9">vainavi dancing</h3>
+      </div>
+      <div class="v10">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid10.mp4">
+        </video>
+        <h3 id="t10">vainavi dancing</h3>
+      </div>
+      <div class="v11">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid11.mp4">
+        </video>
+        <h3 id="t11">vainavi dancing</h3>
+      </div>
+      <div class="v12">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid12.mp4">
+        </video>
+        <h3 id="t12">vainavi dancing</h3>
+      </div>
+      <div class="v13">
+        <video  controls autoplay muted loop style="grid-column: 3/4;grid-row:2/3;"
+        width="240px" height="130px">
+        <source src="http://127.0.0.1:8000/vid13.mp4">
+        </video>
+        <h3 id="t13">vainavi dancing</h3>
+      </div>
+        
+    </div>
+  
+    <div class="c6">
+      <div class="s">
+         <input type="text" name="search" id="search">
+      <button id="btn"><img src="{{url_for('static',path='search_lens.svg')}}" alt="magnifying glass" height="40%"></button>
+      <button>Reset</button>
+      </div>
+     
+      
+    </div>
+  </div>
+  <script src="{{url_for('static',path='js/filter.js')}}"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAVuaSoxMrpfuOwKefRjYrsBQeStXKILD8",
+      authDomain: "video-app24.firebaseapp.com",
+      projectId: "video-app24",
+      storageBucket: "video-app24.firebasestorage.app",
+      messagingSenderId: "267990333336",
+      appId: "1:267990333336:web:f4cba13fafafa6796e9ded",
+      measurementId: "G-Y5X7XKP4RP"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+</html>
